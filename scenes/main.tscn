@@ -1,0 +1,245 @@
+[gd_scene load_steps=35 format=3 uid="uid://bnak0qqcgdq7n"]
+
+[ext_resource type="PackedScene" uid="uid://co3ww46qxt5ml" path="res://scenes/bo_watering.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://d3u8for4erpnc" path="res://scenes/main.gd" id="1_trceg"]
+[ext_resource type="Texture2D" uid="uid://dvwpwvc366u4g" path="res://assets/UI/frame.png" id="2_eb6dy"]
+[ext_resource type="Script" uid="uid://dy1ejp7g0wgh1" path="res://scenes/bo.gd" id="2_muem4"]
+[ext_resource type="PackedScene" uid="uid://cr18j5ygk4oec" path="res://scenes/bo_reading.tscn" id="3_jbj1t"]
+[ext_resource type="Texture2D" uid="uid://c7rdy4wwpydto" path="res://assets/UI/dog_clock.png" id="3_trceg"]
+[ext_resource type="Texture2D" uid="uid://83frpmy3u5eu" path="res://assets/UI/hour_hand.png" id="4_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://vtlsobtx8ta5" path="res://scenes/bo_sleeping.tscn" id="4_muem4"]
+[ext_resource type="Script" uid="uid://srtkapv046ev" path="res://scenes/clock.gd" id="5_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://dxp8rkoqyvlgc" path="res://assets/UI/minute_hand.png" id="5_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://cmfa3g6s1eo6l" path="res://scenes/panda_sit.tscn" id="6_gqmmt"]
+[ext_resource type="Texture2D" uid="uid://u8fk668wf0lq" path="res://assets/UI/play.png" id="6_jbj1t"]
+[ext_resource type="Script" uid="uid://clh3ytgrpqi66" path="res://scenes/panda.gd" id="6_yc10j"]
+[ext_resource type="Texture2D" uid="uid://cgqbllvdao3gs" path="res://assets/UI/1.png" id="7_muem4"]
+[ext_resource type="PackedScene" uid="uid://cto6c2fqhpkq4" path="res://scenes/panda_money.tscn" id="7_yc10j"]
+[ext_resource type="Texture2D" uid="uid://barm5qh2lmumq" path="res://assets/UI/2.png" id="8_dp3eg"]
+[ext_resource type="PackedScene" uid="uid://d2agnc7br5k6t" path="res://scenes/panda_sleeping.tscn" id="8_jscy8"]
+[ext_resource type="Texture2D" uid="uid://chhb2r5ci0w7y" path="res://assets/UI/3.png" id="9_0ld40"]
+[ext_resource type="Texture2D" uid="uid://bp6oeu7ct6f3j" path="res://assets/UI/4.png" id="10_gqmmt"]
+[ext_resource type="Script" uid="uid://dkvadferkcsq4" path="res://scenes/dog.gd" id="10_og1vs"]
+[ext_resource type="PackedScene" uid="uid://b0ph5a7lpdbof" path="res://scenes/dog_game.tscn" id="11_2wyq8"]
+[ext_resource type="Texture2D" uid="uid://bg4dvlsghitmc" path="res://assets/UI/5.png" id="11_yc10j"]
+[ext_resource type="Texture2D" uid="uid://bf206okxnkro1" path="res://assets/UI/close.png" id="12_jscy8"]
+[ext_resource type="PackedScene" uid="uid://dnxxle6fy741k" path="res://scenes/dog_cloud.tscn" id="12_vxglm"]
+[ext_resource type="PackedScene" uid="uid://dhlt27mafqeix" path="res://scenes/dog_sleep.tscn" id="13_2f3dj"]
+[ext_resource type="Script" uid="uid://3mi8ppkxru3r" path="res://scenes/lily.gd" id="14_yq6so"]
+[ext_resource type="PackedScene" uid="uid://cmb50edgujwfu" path="res://scenes/lily_draw.tscn" id="15_fv21b"]
+[ext_resource type="PackedScene" uid="uid://d4c5yxrdhx1g5" path="res://scenes/lily_loaf.tscn" id="16_tel4y"]
+[ext_resource type="PackedScene" uid="uid://ows7p7abo7t" path="res://scenes/lily_sleep.tscn" id="17_qkpxi"]
+[ext_resource type="Script" uid="uid://1ks0c1wwbmeh" path="res://scenes/raccoon.gd" id="18_5q0nq"]
+[ext_resource type="PackedScene" uid="uid://bi0rat0uypl2b" path="res://scenes/raccoon_run.tscn" id="19_dgi5k"]
+[ext_resource type="PackedScene" uid="uid://canlc0x01otky" path="res://scenes/raccoon_sit.tscn" id="20_j8jky"]
+[ext_resource type="PackedScene" uid="uid://vbfn5sv557bd" path="res://scenes/raccoon_sleep.tscn" id="21_kmb1v"]
+
+[sub_resource type="Environment" id="Environment_jbj1t"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_trceg")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0.467466, -0.523783, 0.712128, -0.177415, 0.733588, 0.656028, 0, 2.45381, 8.19535)
+shadow_enabled = true
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 6.07343, -12.0786)
+shadow_enabled = true
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.0491102, 0.177335, 0.982924, 0.858297, 0.495796, -0.132333, -0.510797, 0.85014, -0.127858, 13.7544, 2.48787, 2.52493)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jbj1t")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.878066, 0.478539, 0, -0.478539, 0.878066, 0, 2.66686, 8.06375)
+
+[node name="Bo" type="Node3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+script = ExtResource("2_muem4")
+
+[node name="BoWatering" parent="Bo" instance=ExtResource("1_o5qli")]
+visible = false
+
+[node name="BoReading" parent="Bo" instance=ExtResource("3_jbj1t")]
+
+[node name="BoSleeping" parent="Bo" instance=ExtResource("4_muem4")]
+visible = false
+
+[node name="Panda" type="Node3D" parent="."]
+transform = Transform3D(-0.6, 0, -5.24537e-08, 0, 0.6, 0, 5.24537e-08, 0, -0.6, 0, 0, 1.64569)
+visible = false
+script = ExtResource("6_yc10j")
+
+[node name="PandaSit" parent="Panda" instance=ExtResource("6_gqmmt")]
+
+[node name="PandaMoney" parent="Panda" instance=ExtResource("7_yc10j")]
+visible = false
+
+[node name="PandaSleep" parent="Panda" instance=ExtResource("8_jscy8")]
+visible = false
+
+[node name="Dog" type="Node3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+visible = false
+script = ExtResource("10_og1vs")
+
+[node name="DogGame" parent="Dog" instance=ExtResource("11_2wyq8")]
+
+[node name="DogCloud" parent="Dog" instance=ExtResource("12_vxglm")]
+visible = false
+
+[node name="DogSleep" parent="Dog" instance=ExtResource("13_2f3dj")]
+visible = false
+
+[node name="Lily" type="Node3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+visible = false
+script = ExtResource("14_yq6so")
+
+[node name="LilyDraw" parent="Lily" instance=ExtResource("15_fv21b")]
+visible = false
+
+[node name="LilyLoaf" parent="Lily" instance=ExtResource("16_tel4y")]
+
+[node name="LilySleep" parent="Lily" instance=ExtResource("17_qkpxi")]
+visible = false
+
+[node name="Raccoon" type="Node3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 1.18222, 0)
+script = ExtResource("18_5q0nq")
+
+[node name="RaccoonRun" parent="Raccoon" instance=ExtResource("19_dgi5k")]
+visible = false
+
+[node name="RaccoonSit" parent="Raccoon" instance=ExtResource("20_j8jky")]
+
+[node name="RaccoonSleep" parent="Raccoon" instance=ExtResource("21_kmb1v")]
+visible = false
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Frame" type="TextureRect" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_eb6dy")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Clock" type="TextureRect" parent="UI"]
+offset_left = 10.0
+offset_top = 52.0
+offset_right = 253.0
+offset_bottom = 213.0
+texture = ExtResource("3_trceg")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("5_a8y0u")
+
+[node name="HourHand" type="TextureRect" parent="UI/Clock"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -6.28319
+pivot_offset = Vector2(124, 85)
+texture = ExtResource("4_a8y0u")
+expand_mode = 1
+
+[node name="MinuteHand" type="TextureRect" parent="UI/Clock"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(124, 82)
+texture = ExtResource("5_jkv2x")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -140.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="PlayButton" type="TextureButton" parent="UI/HBoxContainer"]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("6_jbj1t")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="RaccoonButton" type="TextureButton" parent="UI/HBoxContainer"]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 4
+texture_normal = ExtResource("7_muem4")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="LilyButton" type="TextureButton" parent="UI/HBoxContainer"]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 4
+texture_normal = ExtResource("8_dp3eg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="PandaButton" type="TextureButton" parent="UI/HBoxContainer"]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 4
+texture_normal = ExtResource("9_0ld40")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="DogButton" type="TextureButton" parent="UI/HBoxContainer"]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 4
+texture_normal = ExtResource("10_gqmmt")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="BoButton" type="TextureButton" parent="UI/HBoxContainer"]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 4
+texture_normal = ExtResource("11_yc10j")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="CloseButton" type="TextureButton" parent="UI"]
+offset_left = 622.0
+offset_top = 107.0
+offset_right = 702.0
+offset_bottom = 187.0
+texture_normal = ExtResource("12_jscy8")
+ignore_texture_size = true
+stretch_mode = 4
+
+[connection signal="pressed" from="UI/HBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="UI/CloseButton" to="." method="_on_close_button_pressed"]

@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bwk8k5dfcf6b3"
+path.s3tc="res://.godot/imported/波困-看书_坐垫.png-50e5ddd72a25beecf398091f39f19f67.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "3b900a16d6102924d9bd24dce4e8450e"
+}
+
+[deps]
+
+source_file="res://assets/models/Bo/波困-看书_坐垫.png"
+dest_files=["res://.godot/imported/波困-看书_坐垫.png-50e5ddd72a25beecf398091f39f19f67.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -1,0 +1,255 @@
+[gd_scene load_steps=31 format=3 uid="uid://co3ww46qxt5ml"]
+
+[ext_resource type="PackedScene" uid="uid://b75gyw8ey7dhc" path="res://assets/models/Bo/波困-浇花.glb" id="1_7hlmi"]
+[ext_resource type="Texture2D" uid="uid://c3e0gcw6ma3bg" path="res://assets/anim/watering/jiaohua_00.png" id="2_dyhyv"]
+[ext_resource type="Texture2D" uid="uid://ccnw2i7syceon" path="res://assets/anim/watering/jiaohua_01.png" id="3_y2nh4"]
+[ext_resource type="Texture2D" uid="uid://cbmi02galx34t" path="res://assets/anim/watering/jiaohua_02.png" id="4_n8826"]
+[ext_resource type="Texture2D" uid="uid://5kkad3jj28jg" path="res://assets/anim/watering/jiaohua_03.png" id="5_mr0nt"]
+[ext_resource type="Texture2D" uid="uid://136wcjv8xxfd" path="res://assets/anim/watering/jiaohua_04.png" id="6_5hhhs"]
+[ext_resource type="Texture2D" uid="uid://cjv8o5ajyu84l" path="res://assets/anim/watering/jiaohua_05.png" id="7_0ek6m"]
+[ext_resource type="Texture2D" uid="uid://b5g5yb483v65t" path="res://assets/anim/watering/jiaohua_06.png" id="8_vb826"]
+[ext_resource type="Texture2D" uid="uid://dkld6pcdufejj" path="res://assets/anim/watering/jiaohua_07.png" id="9_sjpsn"]
+[ext_resource type="Texture2D" uid="uid://bpxqei4fp52on" path="res://assets/anim/watering/jiaohua_08.png" id="10_nq0b8"]
+[ext_resource type="Texture2D" uid="uid://b6shbo0w557n8" path="res://assets/anim/watering/jiaohua_09.png" id="11_8lqxx"]
+[ext_resource type="Texture2D" uid="uid://usp4del6ud05" path="res://assets/anim/watering/jiaohua_10.png" id="12_01bmp"]
+[ext_resource type="Texture2D" uid="uid://b0spfitsvswjb" path="res://assets/anim/watering/jiaohua_11.png" id="13_cilmg"]
+[ext_resource type="Texture2D" uid="uid://17kr88railcb" path="res://assets/anim/watering/jiaohua_12.png" id="14_f44e5"]
+[ext_resource type="Texture2D" uid="uid://boe3duixdo02d" path="res://assets/anim/watering/jiaohua_13.png" id="15_kw0tj"]
+[ext_resource type="Texture2D" uid="uid://job56xxwp7ij" path="res://assets/anim/watering/jiaohua_14.png" id="16_cs3sr"]
+[ext_resource type="Texture2D" uid="uid://cnl13oyq7pugk" path="res://assets/anim/watering/jiaohua_15.png" id="17_hhmof"]
+[ext_resource type="Texture2D" uid="uid://bdbxrwbp441ym" path="res://assets/anim/watering/jiaohua_16.png" id="18_sw41h"]
+[ext_resource type="Texture2D" uid="uid://b65mruet88nd4" path="res://assets/anim/watering/jiaohua_17.png" id="19_604by"]
+[ext_resource type="Texture2D" uid="uid://bn5t5jvs7yjd3" path="res://assets/anim/watering/jiaohua_18.png" id="20_7kaot"]
+[ext_resource type="Texture2D" uid="uid://47exjlinsusa" path="res://assets/anim/watering/jiaohua_19.png" id="21_yw67u"]
+[ext_resource type="Texture2D" uid="uid://ccusv1oyq2g5u" path="res://assets/anim/watering/jiaohua_20.png" id="22_ios4m"]
+[ext_resource type="Texture2D" uid="uid://b2usm7koh158x" path="res://assets/anim/watering/jiaohua_21.png" id="23_88fvt"]
+[ext_resource type="Texture2D" uid="uid://btwre6emecnth" path="res://assets/anim/watering/jiaohua_22.png" id="24_l7fox"]
+[ext_resource type="Texture2D" uid="uid://bxxuj25x0b1m4" path="res://assets/anim/watering/jiaohua_23.png" id="25_py4gk"]
+[ext_resource type="Texture2D" uid="uid://mnkpap3htwxk" path="res://assets/anim/watering/jiaohua_24.png" id="26_0fkqd"]
+
+[sub_resource type="Animation" id="Animation_7hlmi"]
+resource_name = "立方体_004Action"
+length = 1.70833
+tracks/0/type = "blend_shape"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("骨架/Skeleton3D/立方体_004:呼吸")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0.0416667, 1, 0.427807, 0.0833333, 1, 0.424706, 0.125, 1, 0.415829, 0.166667, 1, 0.401818, 0.208333, 1, 0.383316, 0.25, 1, 0.360963, 0.291667, 1, 0.335401, 0.333333, 1, 0.307273, 0.375, 1, 0.277219, 0.416667, 1, 0.245882, 0.5, 1, 0.181925, 0.541667, 1, 0.150588, 0.583333, 1, 0.120535, 0.625, 1, 0.0924065, 0.666667, 1, 0.0668449, 0.708333, 1, 0.044492, 0.75, 1, 0.0259893, 0.791667, 1, 0.0119786, 0.833333, 1, 0.00310159, 0.875, 1, 0, 0.916667, 1, 0.0031016, 0.958333, 1, 0.0119786, 1, 1, 0.0259893, 1.04167, 1, 0.044492, 1.08333, 1, 0.0668449, 1.125, 1, 0.0924064, 1.16667, 1, 0.120535, 1.20833, 1, 0.150588, 1.25, 1, 0.181925, 1.33333, 1, 0.245882, 1.375, 1, 0.277219, 1.41667, 1, 0.307273, 1.45833, 1, 0.335401, 1.5, 1, 0.360963, 1.54167, 1, 0.383316, 1.58333, 1, 0.401818, 1.625, 1, 0.415829, 1.66667, 1, 0.424706, 1.70833, 1, 0.427807)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("骨架/Skeleton3D:骨骼")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, -1.01453, -0.0175703)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("骨架/Skeleton3D:骨骼")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 3.16486e-09, 1.19209e-07, 7.5456e-16, 1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("骨架/Skeleton3D:head")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 4.32356e-16, 1.19209e-07, 5.29396e-23, 1)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("骨架/Skeleton3D:arm.l")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.0106116, 0.0240009, 0.893581, -0.448135)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("骨架/Skeleton3D:arm.r")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.0106116, 0.0240009, 0.893581, 0.448135)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("骨架/Skeleton3D:leg.l")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -1.82202e-07, -2.72952e-07, 0.999165, -0.0408612)
+
+[sub_resource type="Animation" id="Animation_0bcmj"]
+resource_name = "骨架动作"
+length = 1.70833
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("骨架/Skeleton3D:骨骼")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 1.68276, -1.06673, 0.561916)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("骨架/Skeleton3D:骨骼")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 2.09316e-09, 0.437269, -2.80218e-09, 0.899331)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("骨架/Skeleton3D:head")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 4.87867e-16, 1.3411e-07, -1.59595e-16, 1, 0.133333, 1, -0.000886349, -0.000375778, -0.000743549, 0.999999, 0.166667, 1, -0.00155851, -0.000660868, -0.00130741, 0.999998, 0.2, 1, -0.0024462, -0.00103733, -0.00205209, 0.999994, 0.233333, 1, -0.00347246, -0.00147258, -0.00291301, 0.999989, 0.266667, 1, -0.00462191, -0.00196007, -0.00387727, 0.99998, 0.3, 1, -0.00587915, -0.00249327, -0.00493195, 0.999967, 0.333333, 1, -0.00722878, -0.00306566, -0.00606414, 0.999951, 0.4, 1, -0.010159, -0.00430842, -0.00852228, 0.999903, 0.5, 1, -0.0147466, -0.00625405, -0.0123707, 0.999795, 0.533333, 1, -0.01625, -0.00689167, -0.0136319, 0.999751, 0.566667, 1, -0.0177071, -0.00750966, -0.0148543, 0.999705, 0.6, 1, -0.0191026, -0.00810149, -0.0160249, 0.999656, 0.633333, 1, -0.0204209, -0.00866064, -0.0171309, 0.999607, 0.666667, 1, -0.0216469, -0.00918059, -0.0181594, 0.999559, 0.7, 1, -0.0227189, -0.00963522, -0.0190586, 0.999514, 0.733333, 1, -0.0236523, -0.0100311, -0.0198416, 0.999473, 0.766667, 1, -0.0244318, -0.0103617, -0.0204956, 0.999438, 0.833333, 1, -0.0254676, -0.010801, -0.0213645, 0.999389, 1, 1, -0.0240959, -0.0102192, -0.0202138, 0.999453, 1.03333, 1, -0.0232087, -0.00984295, -0.0194695, 0.999493, 1.06667, 1, -0.0221829, -0.00940791, -0.018609, 0.999537, 1.1, 1, -0.0210339, -0.00892062, -0.0176451, 0.999583, 1.13333, 1, -0.0197772, -0.00838759, -0.0165908, 0.999632, 1.16667, 1, -0.0184279, -0.00781537, -0.015459, 0.99968, 1.2, 1, -0.0169862, -0.00720394, -0.0142496, 0.999728, 1.26667, 1, -0.0139795, -0.00592871, -0.0117272, 0.999816, 1.33333, 1, -0.0109108, -0.00462725, -0.00915295, 0.999888, 1.36667, 1, -0.00940721, -0.00398959, -0.00789161, 0.999917, 1.4, 1, -0.00794979, -0.00337147, -0.006669, 0.999941, 1.43333, 1, -0.00655397, -0.00277947, -0.00549805, 0.99996, 1.46667, 1, -0.00523513, -0.00222013, -0.00439169, 0.999974, 1.5, 1, -0.00400868, -0.0017, -0.00336284, 0.999985, 1.53333, 1, -0.00293623, -0.00124516, -0.00246317, 0.999992, 1.56667, 1, -0.00200235, -0.000849099, -0.00167975, 0.999996, 1.6, 1, -0.00122243, -0.000518323, -0.00102548, 0.999999, 1.66667, 1, -0.000185986, -7.87377e-05, -0.000156023, 1, 1.70833, 1, 4.87867e-16, 1.3411e-07, -1.59595e-16, 1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("骨架/Skeleton3D:arm.l")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.0106116, -0.0240008, -0.893581, 0.448135)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("骨架/Skeleton3D:arm.r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.0106116, 0.0240009, 0.893581, 0.448135, 0.133333, 1, 0.0105066, 0.0253905, 0.893125, 0.448968, 0.166667, 1, 0.010427, 0.0264443, 0.892778, 0.4496, 0.2, 1, 0.0103218, 0.0278359, 0.892317, 0.450433, 0.233333, 1, 0.0102001, 0.0294448, 0.891781, 0.451394, 0.266667, 1, 0.0100637, 0.0312468, 0.891176, 0.452468, 0.3, 1, 0.00991456, 0.0332176, 0.89051, 0.453641, 0.333333, 1, 0.00975436, 0.0353332, 0.889789, 0.454898, 0.366667, 1, 0.0095831, 0.0375934, 0.889012, 0.456237, 0.4, 1, 0.00940629, 0.0399258, 0.888204, 0.457615, 0.433333, 1, 0.00922573, 0.0423063, 0.887371, 0.459018, 0.5, 1, 0.00886071, 0.0471143, 0.885666, 0.461841, 0.533333, 1, 0.00868174, 0.0494694, 0.88482, 0.463219, 0.566667, 1, 0.00850821, 0.0517518, 0.883992, 0.46455, 0.6, 1, 0.00834198, 0.0539372, 0.883194, 0.465822, 0.633333, 1, 0.00818487, 0.0560016, 0.882433, 0.467021, 0.666667, 1, 0.00803871, 0.057921, 0.881721, 0.468133, 0.7, 1, 0.00791088, 0.0595991, 0.881095, 0.469103, 0.733333, 1, 0.00779953, 0.0610601, 0.880546, 0.469946, 0.766667, 1, 0.00770653, 0.06228, 0.880086, 0.470649, 0.8, 1, 0.00763373, 0.0632349, 0.879724, 0.471199, 0.866667, 1, 0.00756518, 0.0641336, 0.879383, 0.471715, 0.966667, 1, 0.00766646, 0.0628056, 0.879887, 0.470952, 1, 1, 0.0077466, 0.0617543, 0.880284, 0.470346, 1.03333, 1, 0.00785245, 0.0603657, 0.880807, 0.469546, 1.06667, 1, 0.0079748, 0.0587601, 0.881408, 0.468618, 1.1, 1, 0.0081118, 0.0569614, 0.882078, 0.467577, 1.13333, 1, 0.0082616, 0.0549936, 0.882805, 0.466436, 1.16667, 1, 0.00842234, 0.0528807, 0.88358, 0.465208, 1.2, 1, 0.00859406, 0.0506227, 0.884402, 0.463892, 1.23333, 1, 0.00877123, 0.0482919, 0.885244, 0.462531, 1.26667, 1, 0.008952, 0.0459124, 0.886095, 0.461137, 1.33333, 1, 0.00931693, 0.041104, 0.887793, 0.45831, 1.36667, 1, 0.00949562, 0.0387476, 0.888613, 0.456919, 1.4, 1, 0.00966874, 0.0364633, 0.889401, 0.455568, 1.43333, 1, 0.00983447, 0.0342754, 0.89015, 0.45427, 1.46667, 1, 0.00999099, 0.0322081, 0.890852, 0.453041, 1.5, 1, 0.0101365, 0.0302854, 0.891499, 0.451895, 1.53333, 1, 0.0102637, 0.0286042, 0.892061, 0.450892, 1.56667, 1, 0.0103744, 0.0271401, 0.892548, 0.450016, 1.6, 1, 0.0104668, 0.0259174, 0.892952, 0.449284, 1.63333, 1, 0.0105391, 0.0249601, 0.893267, 0.44871, 1.7, 1, 0.0106072, 0.0240592, 0.893562, 0.44817, 1.70833, 1, 0.0106116, 0.0240009, 0.893581, 0.448135)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("骨架/Skeleton3D:leg.l")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 1.82084e-07, 2.71928e-07, -0.999165, 0.0408612)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nr4dl"]
+_data = {
+&"立方体_004Action": SubResource("Animation_7hlmi"),
+&"骨架动作": SubResource("Animation_0bcmj")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wvp8a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dyhyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y2nh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n8826")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mr0nt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5hhhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0ek6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vb826")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sjpsn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nq0b8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8lqxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_01bmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_cilmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_f44e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_kw0tj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_cs3sr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hhmof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_sw41h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_604by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7kaot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_yw67u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ios4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_88fvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_l7fox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_py4gk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0fkqd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="波困-浇花" instance=ExtResource("1_7hlmi")]
+
+[node name="Skeleton3D" parent="骨架" index="0"]
+bones/0/position = Vector3(1.68276, -1.06673, 0.561916)
+bones/0/rotation = Quaternion(2.09316e-09, 0.437269, -2.80218e-09, 0.899331)
+bones/2/rotation = Quaternion(4.87867e-16, 1.3411e-07, -1.59595e-16, 1)
+bones/7/rotation = Quaternion(-0.0106116, 0.0240008, 0.893581, -0.448134)
+bones/9/rotation = Quaternion(0.0106116, 0.0240009, 0.893581, 0.448135)
+bones/12/rotation = Quaternion(-1.82084e-07, -2.71928e-07, 0.999165, -0.0408612)
+
+[node name="Cylinder_020" parent="骨架/Skeleton3D" index="0"]
+transform = Transform3D(-0.287851, 0.0119842, 0.278161, 0.0557456, 0.394477, 0.0406922, -0.272781, 0.0679691, -0.285213, 1.6973, -0.65463, 1.4707)
+
+[node name="立方体_004" parent="骨架/Skeleton3D" index="1"]
+"blend_shapes/呼吸" = 0.427807
+
+[node name="jiaohua_00" parent="." index="10"]
+visible = false
+
+[node name="立方体_003" parent="." index="11"]
+visible = false
+
+[node name="立方体_002" parent="." index="12"]
+visible = false
+
+[node name="AnimationPlayer" parent="." index="13"]
+libraries = {
+&"": SubResource("AnimationLibrary_nr4dl")
+}
+autoplay = "骨架动作"
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." index="14"]
+transform = Transform3D(0.0833529, -0.0271261, -0.0481298, 0.0231769, 0.0962487, -0.0141075, 0.0501511, 0.000603985, 0.086513, 2.42973, 1.19802, 2.34)
+sprite_frames = SubResource("SpriteFrames_wvp8a")
+autoplay = "default"
+frame = 16
+frame_progress = 0.135846

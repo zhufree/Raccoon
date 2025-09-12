@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cjauama6fe42m"
+path.s3tc="res://.godot/imported/波困-看书_未命名.png-a3d334e1c00a48c3405fedd74c56f2f7.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "ba001437af41e7b4b72bbf726e94942e"
+}
+
+[deps]
+
+source_file="res://assets/models/Bo/波困-看书_未命名.png"
+dest_files=["res://.godot/imported/波困-看书_未命名.png-a3d334e1c00a48c3405fedd74c56f2f7.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -16,6 +16,7 @@ enum AnimState {
 # 内部状态管理
 var current_state: AnimState = AnimState.DEFAULT
 var sleep_timer: Timer
+var action_timer: Timer
 var is_sleep_time: bool = false
 
 func _ready():
@@ -26,11 +27,26 @@ func _ready():
 	sleep_timer.one_shot = true
 	sleep_timer.timeout.connect(_on_sleep_timer_timeout)
 	
+		
+	# 创建主动动画定时器
+	action_timer = Timer.new()
+	add_child(action_timer)
+	action_timer.wait_time = 10.0 # 主动动画持续3秒
+	action_timer.one_shot = true
+	action_timer.timeout.connect(_on_action_timer_timeout)
+
+
 	# 设置初始状态
 	set_animation_state(AnimState.DEFAULT)
 	
 	# 开始检查睡眠时间
 	_check_sleep_schedule()
+
+func _on_action_timer_timeout():
+	# 主动动画播放完毕，回到默认状态
+	if current_state == AnimState.ACTIVE and not is_sleep_time:
+		set_animation_state(AnimState.DEFAULT)
+
 
 func _process(delta):
 	# 每秒检查一次是否到了睡眠时间
@@ -82,6 +98,7 @@ func set_animation_state(state: AnimState):
 func play_action():
 	if not is_sleep_time:  # 睡眠时间不响应主动调用
 		set_animation_state(AnimState.ACTIVE)
+		action_timer.start()
 
 # 回到默认状态（供外部调用）
 func return_to_default():

@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://canlc0x01otky"]
+[gd_scene load_steps=7 format=3 uid="uid://canlc0x01otky"]
 
 [ext_resource type="PackedScene" uid="uid://ch8f4mvy3svy7" path="res://assets/models/raccoon/浣熊-坐.glb" id="1_honi3"]
+[ext_resource type="Script" uid="uid://2eu83qmwiioo" path="res://scenes/raccoon_sit.gd" id="2_5jj3s"]
+[ext_resource type="Animation" uid="uid://dvoi77forvn35" path="res://assets/anim/眨眼.res" id="2_dcw4e"]
 
 [sub_resource type="Animation" id="Animation_u1b3c"]
 resource_name = "骨架动作"
@@ -175,12 +177,18 @@ tracks/23/interp = 0
 tracks/23/loop_wrap = true
 tracks/23/keys = PackedFloat32Array(0, 1, 0.101861, -0.123241, -0.171747, 0.97208)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ygfm1"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dcw4e"]
 _data = {
 &"骨架动作": SubResource("Animation_u1b3c")
 }
 
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5jj3s"]
+_data = {
+&"Blink": ExtResource("2_dcw4e")
+}
+
 [node name="浣熊-坐" instance=ExtResource("1_honi3")]
+script = ExtResource("2_5jj3s")
 
 [node name="Skeleton3D" parent="骨架" index="0"]
 bones/0/position = Vector3(-0.00309885, 0.114334, 0.130743)
@@ -205,14 +213,19 @@ bones/14/rotation = Quaternion(0.0597807, 0.628167, 0.772114, 0.0753119)
 bones/15/position = Vector3(-0.0403482, 0.326264, 0.0748208)
 bones/15/rotation = Quaternion(0.289417, 0.079949, 0.011435, 0.95379)
 bones/16/rotation = Quaternion(-0.610384, -0.223015, -0.244426, 0.719688)
-bones/17/rotation = Quaternion(0.116312, -0.0883572, -0.0939286, 0.984806)
+bones/17/rotation = Quaternion(0.116312, -0.0883572, -0.0939287, 0.984806)
 bones/18/rotation = Quaternion(0.101861, -0.123241, -0.171747, 0.97208)
 
 [node name="Sphere" parent="骨架/Skeleton3D" index="0"]
-transform = Transform3D(0.0834164, 0.427358, 0.193438, -0.183898, 0.210537, -0.385832, -0.431549, -0.00711103, 0.201808, -1.43977, 1.95344, 0.0345754)
+transform = Transform3D(0.0834162, 0.427358, 0.193438, -0.183899, 0.210537, -0.385832, -0.431548, -0.0071117, 0.201808, -1.43977, 1.95344, 0.0345753)
 
 [node name="AnimationPlayer" parent="." index="6"]
 libraries = {
-&"": SubResource("AnimationLibrary_ygfm1")
+&"": SubResource("AnimationLibrary_dcw4e")
 }
 autoplay = "骨架动作"
+
+[node name="BlinkAnim" type="AnimationPlayer" parent="." index="7"]
+libraries = {
+&"": SubResource("AnimationLibrary_5jj3s")
+}

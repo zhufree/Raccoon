@@ -33,6 +33,7 @@ func _ready():
 	env.background_mode = Environment.BG_CLEAR_COLOR
 	env.background_color = Color(0, 0, 0, 0)
 	scenes_containers = [bo, panda, dog, raccoon, lily]
+	current_animal = raccoon
 	world_environment.environment = env
 	
 	# 初始化摄像头位置
@@ -114,3 +115,38 @@ func _on_play_button_pressed() -> void:
 
 func _on_close_button_pressed() -> void:
 	pass # Replace with function body.
+
+func _input(event):
+	# 处理鼠标拖动窗口和摄像头旋转
+	if event is InputEventMouseButton:
+		# if event.button_index == MOUSE_BUTTON_LEFT:
+		# 	if event.pressed:
+		# 		is_dragging = true
+		# 		# 记录鼠标相对于窗口的偏移
+		# 		var window_pos = DisplayServer.window_get_position()
+		# 		var mouse_pos = Vector2i(DisplayServer.mouse_get_position())
+		# 		drag_offset = window_pos - mouse_pos
+		# 	else:
+		# 		is_dragging = false
+		if event.button_index == MOUSE_BUTTON_RIGHT:
+			if event.pressed:
+				is_camera_rotating = true
+				last_mouse_position = event.position
+			else:
+				is_camera_rotating = false
+	
+	elif event is InputEventMouseMotion:
+		if is_camera_rotating:
+			# 计算鼠标移动增量
+			var mouse_delta = event.position - last_mouse_position
+			last_mouse_position = event.position
+			
+			# 更新摄像头角度
+			camera_yaw -= mouse_delta.x * camera_sensitivity
+			camera_pitch += mouse_delta.y * camera_sensitivity
+			
+			# 限制垂直角度范围，避免翻转
+			camera_pitch = clamp(camera_pitch, -PI/2 + 0.5, PI/2 - 0.5)
+			
+			# 更新摄像头位置
+			update_camera_position()

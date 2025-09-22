@@ -1,6 +1,5 @@
 extends Node3D
 @onready var camera_3d: Camera3D = $Camera3D
-@onready var play_button: TextureButton = $UI/HBoxContainer/PlayButton
 @onready var raccoon_button: TextureButton = $UI/HBoxContainer/RaccoonButton
 @onready var lily_button: TextureButton = $UI/HBoxContainer/LilyButton
 @onready var panda_button: TextureButton = $UI/HBoxContainer/PandaButton
@@ -8,6 +7,8 @@ extends Node3D
 @onready var bo_button: TextureButton = $UI/HBoxContainer/BoButton
 @onready var close_button: TextureButton = $UI/CloseButton
 @onready var world_environment: WorldEnvironment = $WorldEnvironment
+@onready var play_button: TextureButton = $UI/HBoxContainer/VBoxContainer/PlayButton
+@onready var sleep_button: TextureButton = $UI/HBoxContainer/VBoxContainer/SleepButton
 
 @onready var bo: Node3D = $Bo
 @onready var panda: Node3D = $Panda
@@ -26,16 +27,10 @@ var scenes_containers = []
 var current_animal: AnimalBase = raccoon
 
 func _ready():
-	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_TRANSPARENT, true)
-	get_viewport().transparent_bg = true
-	var env = Environment.new()
 	
-	env.background_mode = Environment.BG_CLEAR_COLOR
-	env.background_color = Color(0, 0, 0, 0)
 	scenes_containers = [bo, panda, dog, raccoon, lily]
 	current_animal = raccoon
 	update_button_sizes(raccoon_button)
-	world_environment.environment = env
 	
 	# 初始化摄像头位置
 	update_camera_position()
@@ -154,4 +149,4 @@ func _input(event):
 
 
 func _on_sleep_button_pressed() -> void:
-	pass # Replace with function body.
+	current_animal.play_sleep()

@@ -97,14 +97,16 @@ func set_animation_state(state: AnimState):
 
 # 播放主动动画（供外部调用）
 func play_action():
-	if not is_sleep_time:  # 睡眠时间不响应主动调用
-		set_animation_state(AnimState.ACTIVE)
-		action_timer.start()
+	set_animation_state(AnimState.ACTIVE)
+	action_timer.start()
+
+func play_sleep():
+	set_animation_state(AnimState.SLEEP)
+	sleep_timer.start()
 
 # 回到默认状态（供外部调用）
 func return_to_default():
-	if not is_sleep_time:  # 睡眠时间不响应外部调用
-		set_animation_state(AnimState.DEFAULT)
+	set_animation_state(AnimState.DEFAULT)
 
 # 获取当前状态
 func get_current_state() -> AnimState:

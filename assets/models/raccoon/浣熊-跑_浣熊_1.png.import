@@ -18,7 +18,7 @@ dest_files=["res://.godot/imported/浣熊-跑_浣熊_1.png-81baf844d1f35e6127c92
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

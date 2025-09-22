@@ -4,6 +4,7 @@ func _ready():
 	# 设置动画节点引用
 	default_anim_node = $PandaSit
 	active_anim_node = $PandaMoney
+	#active_anim_node = $PandaSleep
 	sleep_anim_node = $PandaSleep
 	
 	# 调用父类的_ready

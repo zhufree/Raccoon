@@ -1,8 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://canlc0x01otky"]
+[gd_scene load_steps=11 format=3 uid="uid://canlc0x01otky"]
 
 [ext_resource type="PackedScene" uid="uid://ch8f4mvy3svy7" path="res://assets/models/raccoon/浣熊-坐.glb" id="1_honi3"]
 [ext_resource type="Script" uid="uid://2eu83qmwiioo" path="res://scenes/raccoon_sit.gd" id="2_5jj3s"]
 [ext_resource type="Animation" uid="uid://dvoi77forvn35" path="res://assets/anim/眨眼.res" id="2_dcw4e"]
+[ext_resource type="ArrayMesh" uid="uid://drahmppjgylpf" path="res://assets/models/lab/bottle-part1.res" id="3_75qnj"]
+[ext_resource type="ArrayMesh" uid="uid://v42mqxslrswj" path="res://assets/models/lab/bottle-part2.res" id="4_cg8ee"]
+[ext_resource type="ArrayMesh" uid="uid://cio8kouue6fr4" path="res://assets/models/lab/lab-part1.res" id="5_0ixgo"]
+[ext_resource type="ArrayMesh" uid="uid://bkkvlm086jybi" path="res://assets/models/lab/lab-part2.res" id="6_7hh3o"]
 
 [sub_resource type="Animation" id="Animation_u1b3c"]
 resource_name = "骨架动作"
@@ -217,15 +221,30 @@ bones/17/rotation = Quaternion(0.116312, -0.0883572, -0.0939287, 0.984806)
 bones/18/rotation = Quaternion(0.101861, -0.123241, -0.171747, 0.97208)
 
 [node name="Sphere" parent="骨架/Skeleton3D" index="0"]
-transform = Transform3D(0.0834162, 0.427358, 0.193438, -0.183899, 0.210537, -0.385832, -0.431548, -0.0071117, 0.201808, -1.43977, 1.95344, 0.0345753)
+transform = Transform3D(0.08341621, 0.4273575, 0.19343804, -0.1838987, 0.21053736, -0.3858318, -0.4315483, -0.0071116835, 0.20180795, -1.4397743, 1.9534409, 0.0345753)
 
-[node name="AnimationPlayer" parent="." index="6"]
+[node name="Sphere" parent="骨架/Skeleton3D/Sphere" index="0"]
+mesh = ExtResource("3_75qnj")
+
+[node name="Sphere2" type="MeshInstance3D" parent="骨架/Skeleton3D/Sphere" index="1"]
+mesh = ExtResource("4_cg8ee")
+skeleton = NodePath("")
+
+[node name="试验台" parent="." index="2"]
+mesh = ExtResource("5_0ixgo")
+
+[node name="试验台2" type="MeshInstance3D" parent="." index="3"]
+transform = Transform3D(0.7408918, 0.040456522, 0.17203097, -0.031643674, 0.7598369, -0.042409927, -0.17386796, 0.03410563, 0.7407825, 3.0476325, -0.91986054, 3.210856)
+mesh = ExtResource("6_7hh3o")
+skeleton = NodePath("")
+
+[node name="AnimationPlayer" parent="." index="7"]
 libraries = {
 &"": SubResource("AnimationLibrary_dcw4e")
 }
 autoplay = "骨架动作"
 
-[node name="BlinkAnim" type="AnimationPlayer" parent="." index="7"]
+[node name="BlinkAnim" type="AnimationPlayer" parent="." index="8"]
 libraries = {
 &"": SubResource("AnimationLibrary_5jj3s")
 }

@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6shbo0w557n8"
-path.s3tc="res://.godot/imported/jiaohua_09.png-9bafa6f03b23ef81cc1292e52d4baabd.s3tc.ctex"
+path="res://.godot/imported/jiaohua_09.png-9bafa6f03b23ef81cc1292e52d4baabd.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/anim/watering/jiaohua_09.png"
-dest_files=["res://.godot/imported/jiaohua_09.png-9bafa6f03b23ef81cc1292e52d4baabd.s3tc.ctex"]
+dest_files=["res://.godot/imported/jiaohua_09.png-9bafa6f03b23ef81cc1292e52d4baabd.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/hour_hand.png-16a6025487375e70f4255c83d3f6e8a
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

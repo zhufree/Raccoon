@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1iwx6hgu38m1"
-path.s3tc="res://.godot/imported/波困-浇花_未命名_2.png-4933e603afcf544bb196c2c468715c5c.s3tc.ctex"
+path="res://.godot/imported/波困-浇花_未命名_2.png-4933e603afcf544bb196c2c468715c5c.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "4c707abcdb382f6c1c2796d658be3775"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/Bo/波困-浇花_未命名_2.png"
-dest_files=["res://.godot/imported/波困-浇花_未命名_2.png-4933e603afcf544bb196c2c468715c5c.s3tc.ctex"]
+dest_files=["res://.godot/imported/波困-浇花_未命名_2.png-4933e603afcf544bb196c2c468715c5c.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

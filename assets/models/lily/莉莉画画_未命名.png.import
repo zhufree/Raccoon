@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjclwh3msj4m3"
-path.s3tc="res://.godot/imported/莉莉画画_未命名.png-47c9de054f6c0ff85a025f23b0663be6.s3tc.ctex"
+path="res://.godot/imported/莉莉画画_未命名.png-47c9de054f6c0ff85a025f23b0663be6.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "367c2ec9e39c8f2f4c45f5c6ecf56218"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/lily/莉莉画画_未命名.png"
-dest_files=["res://.godot/imported/莉莉画画_未命名.png-47c9de054f6c0ff85a025f23b0663be6.s3tc.ctex"]
+dest_files=["res://.godot/imported/莉莉画画_未命名.png-47c9de054f6c0ff85a025f23b0663be6.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

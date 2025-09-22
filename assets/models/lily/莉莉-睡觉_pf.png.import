@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyg2uovlabv13"
-path.s3tc="res://.godot/imported/莉莉-睡觉_pf.png-569e07a95cd3675f74913f21c5582407.s3tc.ctex"
+path="res://.godot/imported/莉莉-睡觉_pf.png-569e07a95cd3675f74913f21c5582407.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "8f77995c60b175a6e9bef655cca8ad29"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/lily/莉莉-睡觉_pf.png"
-dest_files=["res://.godot/imported/莉莉-睡觉_pf.png-569e07a95cd3675f74913f21c5582407.s3tc.ctex"]
+dest_files=["res://.godot/imported/莉莉-睡觉_pf.png-569e07a95cd3675f74913f21c5582407.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

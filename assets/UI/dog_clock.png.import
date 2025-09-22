@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/dog_clock.png-fe9d9ee1110bfb9884e771fb7d0934a
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

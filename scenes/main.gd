@@ -34,6 +34,7 @@ func _ready():
 	env.background_color = Color(0, 0, 0, 0)
 	scenes_containers = [bo, panda, dog, raccoon, lily]
 	current_animal = raccoon
+	update_button_sizes(raccoon_button)
 	world_environment.environment = env
 	
 	# 初始化摄像头位置
@@ -63,7 +64,7 @@ func update_camera_position():
 
 # 按钮大小常量
 const BUTTON_SIZE_NORMAL = Vector2(110, 110)
-const BUTTON_SIZE_SELECTED = Vector2(120, 120)
+const BUTTON_SIZE_SELECTED = Vector2(140, 140)
 # 重置所有按钮大小为正常状态，然后设置选中按钮为大尺寸
 func update_button_sizes(selected_button: TextureButton):
 	var all_buttons = [raccoon_button, lily_button, panda_button, dog_button, bo_button]
@@ -128,7 +129,7 @@ func _input(event):
 		# 		drag_offset = window_pos - mouse_pos
 		# 	else:
 		# 		is_dragging = false
-		if event.button_index == MOUSE_BUTTON_RIGHT:
+		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
 				is_camera_rotating = true
 				last_mouse_position = event.position
@@ -150,3 +151,7 @@ func _input(event):
 			
 			# 更新摄像头位置
 			update_camera_position()
+
+
+func _on_sleep_button_pressed() -> void:
+	pass # Replace with function body.

@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1kfw7cd0xinq"
-path.s3tc="res://.godot/imported/sj_26.png-e7b0d997d4b24835477d23389bfc9711.s3tc.ctex"
+path="res://.godot/imported/sj_26.png-e7b0d997d4b24835477d23389bfc9711.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/anim/sleep/sj_26.png"
-dest_files=["res://.godot/imported/sj_26.png-e7b0d997d4b24835477d23389bfc9711.s3tc.ctex"]
+dest_files=["res://.godot/imported/sj_26.png-e7b0d997d4b24835477d23389bfc9711.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

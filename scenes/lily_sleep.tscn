@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ows7p7abo7t"]
+[gd_scene load_steps=7 format=3 uid="uid://ows7p7abo7t"]
 
 [ext_resource type="PackedScene" uid="uid://c5legtth61wh" path="res://assets/models/lily/莉莉-睡觉.glb" id="1_nwn8e"]
+[ext_resource type="SpriteFrames" uid="uid://bt4ltfsflvl7i" path="res://assets/anim/sleeping.tres" id="2_8cqxm"]
 
 [sub_resource type="Animation" id="Animation_gwtgo"]
 resource_name = "立方体_008Action"
@@ -414,7 +415,17 @@ bones/14/position = Vector3(-0.0014636, 0.215523, -0.0122808)
 "blend_shapes/呼吸" = 0.503401
 "blend_shapes/眯眼" = 1.0
 
-[node name="AnimationPlayer" parent="." index="13"]
+[node name="SleepAnim" type="AnimatedSprite3D" parent="." index="12"]
+transform = Transform3D(-0.07512124, -0.06499741, -0.011494734, 0.065466434, -0.07559081, -0.00041085697, -0.008421888, -0.007833816, 0.09933621, -1.7062849, 2.5365293, 0.85027754)
+sprite_frames = ExtResource("2_8cqxm")
+autoplay = "default"
+frame_progress = 0.07796811
+
+[node name="sj_00" parent="." index="13"]
+transform = Transform3D(-0.98264563, -0.18549274, 0, 0, 0, -1, 0.18549274, -0.98264563, 0, -1.5235896, 2.2252376, 1.4039026)
+visible = false
+
+[node name="AnimationPlayer" parent="." index="14"]
 libraries = {
 &"": SubResource("AnimationLibrary_i0e3k")
 }

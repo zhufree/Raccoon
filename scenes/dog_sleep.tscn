@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhlt27mafqeix"]
+[gd_scene load_steps=6 format=3 uid="uid://dhlt27mafqeix"]
 
 [ext_resource type="PackedScene" uid="uid://ca4lin225q5tu" path="res://assets/models/dog/狗-睡觉.glb" id="1_3v6df"]
+[ext_resource type="SpriteFrames" uid="uid://bt4ltfsflvl7i" path="res://assets/anim/sleeping.tres" id="2_korii"]
 
 [sub_resource type="Animation" id="Animation_3v6df"]
 resource_name = "立方体_018Action"
@@ -245,12 +246,22 @@ bones/14/position = Vector3(-0.325248, 0.0652099, -0.105043)
 bones/14/rotation = Quaternion(-0.10497, -0.220672, 0.963358, 0.110572)
 
 [node name="立方体_001" parent="骨架/Skeleton3D" index="0"]
-transform = Transform3D(0.935581, 0.00765425, -0.353029, 0.0890361, 0.962348, 0.256825, 0.341703, -0.271713, 0.899673, -0.945665, 1.34671, -0.36254)
+transform = Transform3D(0.93558073, 0.007652969, -0.35302994, 0.089037664, 0.962348, 0.2568245, 0.34170303, -0.27171305, 0.89967275, -0.9456662, 1.3467102, -0.36254084)
 
 [node name="立方体_002" parent="骨架/Skeleton3D" index="1"]
 "blend_shapes/闭眼" = 1.0
 
-[node name="AnimationPlayer" parent="." index="13"]
+[node name="SleepAnim" type="AnimatedSprite3D" parent="." index="10"]
+transform = Transform3D(0.06461025, 0.076239154, 0.0036205754, -0.07628854, 0.06465337, -2.4108216e-05, -0.0023591751, -0.0027464824, 0.099934384, 1.7186701, 2.0916276, -0.21745515)
+sprite_frames = ExtResource("2_korii")
+autoplay = "default"
+frame_progress = 0.878137
+
+[node name="sj_00" parent="." index="11"]
+transform = Transform3D(-0.89146525, 0.4530891, 0, 0, 0, -1, -0.4530891, -0.89146525, 0, -2.8601577, 2.3308482, -0.89495647)
+visible = false
+
+[node name="AnimationPlayer" parent="." index="14"]
 libraries = {
 &"": SubResource("AnimationLibrary_hee4e")
 }

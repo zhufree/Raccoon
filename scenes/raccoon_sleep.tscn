@@ -1,7 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://vbfn5sv557bd"]
+[gd_scene load_steps=10 format=3 uid="uid://vbfn5sv557bd"]
 
 [ext_resource type="PackedScene" uid="uid://ciy3vks1fa0vr" path="res://assets/models/raccoon/浣熊-睡觉.glb" id="1_k1sr6"]
 [ext_resource type="SpriteFrames" uid="uid://bt4ltfsflvl7i" path="res://assets/anim/sleeping.tres" id="2_tqtul"]
+[ext_resource type="ArrayMesh" uid="uid://drahmppjgylpf" path="res://assets/models/lab/bottle-part1.res" id="2_yd834"]
+[ext_resource type="ArrayMesh" uid="uid://cio8kouue6fr4" path="res://assets/models/lab/lab-part1.res" id="3_0r1oi"]
+[ext_resource type="ArrayMesh" uid="uid://v42mqxslrswj" path="res://assets/models/lab/bottle-part2.res" id="3_qtbt3"]
+[ext_resource type="ArrayMesh" uid="uid://bkkvlm086jybi" path="res://assets/models/lab/lab-part2.res" id="4_jevkg"]
 
 [sub_resource type="Animation" id="Animation_ereff"]
 resource_name = "mesh_003动作"
@@ -254,7 +258,14 @@ bones/14/position = Vector3(-0.481953, -0.0831171, -0.0165339)
 bones/16/rotation = Quaternion(-0.98318, -0.144095, 0.0915483, -0.0649036)
 
 [node name="Sphere" parent="骨架/Skeleton3D" index="0"]
-transform = Transform3D(0.287967, 0.242828, 0.291754, 0.379421, -0.173315, -0.230244, -0.0112168, 0.371493, -0.298124, -1.13277, 0.213904, 0.24628)
+transform = Transform3D(0.28796712, 0.24282798, 0.29175422, 0.37942085, -0.17331561, -0.23024455, -0.011216668, 0.37149328, -0.29812402, -1.1327678, 0.21390532, 0.24628034)
+
+[node name="Sphere" parent="骨架/Skeleton3D/Sphere" index="0"]
+mesh = ExtResource("2_yd834")
+
+[node name="Sphere2" type="MeshInstance3D" parent="骨架/Skeleton3D/Sphere" index="1"]
+mesh = ExtResource("3_qtbt3")
+skeleton = NodePath("")
 
 [node name="Retopo_立方体_002" parent="骨架/Skeleton3D" index="1"]
 "blend_shapes/睡" = 1.0
@@ -268,7 +279,15 @@ sprite_frames = ExtResource("2_tqtul")
 autoplay = "default"
 frame_progress = 0.354918
 
-[node name="AnimationPlayer" parent="." index="8"]
+[node name="试验台" parent="." index="4"]
+mesh = ExtResource("3_0r1oi")
+
+[node name="试验台2" type="MeshInstance3D" parent="." index="5"]
+transform = Transform3D(0.7408918, 0.040456522, 0.17203097, -0.031643674, 0.7598369, -0.042409927, -0.17386796, 0.03410563, 0.7407825, 3.0476325, -0.91986054, 3.210856)
+mesh = ExtResource("4_jevkg")
+skeleton = NodePath("")
+
+[node name="AnimationPlayer" parent="." index="9"]
 libraries = {
 &"": SubResource("AnimationLibrary_45ool")
 }

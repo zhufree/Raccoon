@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpxmt3l10weox"
-path.s3tc="res://.godot/imported/波困-睡觉_未命名.png-cdcbf24d5bba6990e43a9a04e86ef349.s3tc.ctex"
+path="res://.godot/imported/波困-睡觉_未命名.png-cdcbf24d5bba6990e43a9a04e86ef349.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "ba001437af41e7b4b72bbf726e94942e"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/Bo/波困-睡觉_未命名.png"
-dest_files=["res://.godot/imported/波困-睡觉_未命名.png-cdcbf24d5bba6990e43a9a04e86ef349.s3tc.ctex"]
+dest_files=["res://.godot/imported/波困-睡觉_未命名.png-cdcbf24d5bba6990e43a9a04e86ef349.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

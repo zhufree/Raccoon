@@ -60,6 +60,7 @@ func _check_sleep_schedule():
 	
 	# 检查是否是中午12点或晚上12点的整点
 	if (hour == 12 or hour == 0) and minute == 0:
+	#if minute == 54:
 		if not is_sleep_time:
 			is_sleep_time = true
 			set_animation_state(AnimState.SLEEP)

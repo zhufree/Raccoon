@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cto6c2fqhpkq4"]
+[gd_scene load_steps=5 format=3 uid="uid://cto6c2fqhpkq4"]
 
 [ext_resource type="PackedScene" uid="uid://dr3ches21qhq6" path="res://assets/models/panda/熊猫家-数钱.glb" id="1_ga1aq"]
 
@@ -103,129 +103,6 @@ tracks/13/path = NodePath("骨架/Skeleton3D:leg.r")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = PackedFloat32Array(0, 1, -5.60155e-08, -2.82694e-07, 0.999165, 0.0408612)
-
-[sub_resource type="Animation" id="Animation_7gxol"]
-resource_name = "立方体_010Action"
-length = 1.70833
-tracks/0/type = "blend_shape"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("骨架/Skeleton3D/立方体_004:闭眼")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0.0416667, 1, 0)
-tracks/1/type = "blend_shape"
-tracks/1/imported = true
-tracks/1/enabled = true
-tracks/1/path = NodePath("骨架/Skeleton3D/立方体_004:呼吸")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0.0416667, 1, 0, 0.0833333, 1, 0.003625, 0.125, 1, 0.014, 0.166667, 1, 0.030375, 0.208333, 1, 0.052, 0.25, 1, 0.078125, 0.291667, 1, 0.108, 0.333333, 1, 0.140875, 0.375, 1, 0.176, 0.416667, 1, 0.212625, 0.5, 1, 0.287375, 0.541667, 1, 0.324, 0.583333, 1, 0.359125, 0.625, 1, 0.392, 0.666667, 1, 0.421875, 0.708333, 1, 0.448, 0.75, 1, 0.469625, 0.791667, 1, 0.486, 0.833333, 1, 0.496375, 0.875, 1, 0.5, 0.916667, 1, 0.496375, 0.958333, 1, 0.486, 1, 1, 0.469625, 1.04167, 1, 0.448, 1.08333, 1, 0.421875, 1.125, 1, 0.392, 1.16667, 1, 0.359125, 1.20833, 1, 0.324, 1.25, 1, 0.287375, 1.33333, 1, 0.212625, 1.375, 1, 0.176, 1.41667, 1, 0.140875, 1.45833, 1, 0.108, 1.5, 1, 0.0781249, 1.54167, 1, 0.052, 1.58333, 1, 0.030375, 1.625, 1, 0.0139999, 1.66667, 1, 0.00362498, 1.70833, 1, 0)
-tracks/2/type = "blend_shape"
-tracks/2/imported = true
-tracks/2/enabled = true
-tracks/2/path = NodePath("骨架/Skeleton3D/立方体_004:嘴")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0.0416667, 1, 0)
-tracks/3/type = "position_3d"
-tracks/3/imported = true
-tracks/3/enabled = true
-tracks/3/path = NodePath("骨架/Skeleton3D:kx")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, 0.579112, 0.716816, -0.109083)
-tracks/4/type = "scale_3d"
-tracks/4/imported = true
-tracks/4/enabled = true
-tracks/4/path = NodePath("骨架/Skeleton3D:kx")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0, 1, 0.36116, 0.36116, 0.36116)
-tracks/5/type = "position_3d"
-tracks/5/imported = true
-tracks/5/enabled = true
-tracks/5/path = NodePath("骨架/Skeleton3D:骨骼")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = PackedFloat32Array(0, 1, 0, -1.01453, -0.0175703)
-tracks/6/type = "rotation_3d"
-tracks/6/imported = true
-tracks/6/enabled = true
-tracks/6/path = NodePath("骨架/Skeleton3D:骨骼")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = PackedFloat32Array(0, 1, 3.16486e-09, 1.19209e-07, 7.5456e-16, 1)
-tracks/7/type = "position_3d"
-tracks/7/imported = true
-tracks/7/enabled = true
-tracks/7/path = NodePath("骨架/Skeleton3D:head")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = PackedFloat32Array(0, 1, 0, 0.352522, 8.88178e-16)
-tracks/8/type = "rotation_3d"
-tracks/8/imported = true
-tracks/8/enabled = true
-tracks/8/path = NodePath("骨架/Skeleton3D:head")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = PackedFloat32Array(0, 1, 4.32356e-16, 1.19209e-07, 5.29396e-23, 1)
-tracks/9/type = "position_3d"
-tracks/9/imported = true
-tracks/9/enabled = true
-tracks/9/path = NodePath("骨架/Skeleton3D:arm.l")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = PackedFloat32Array(0, 1, 0.336805, 0.323416, 0.00177956)
-tracks/10/type = "rotation_3d"
-tracks/10/imported = true
-tracks/10/enabled = true
-tracks/10/path = NodePath("骨架/Skeleton3D:arm.l")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = PackedFloat32Array(0, 1, -0.0106116, 0.0240009, 0.893581, -0.448135)
-tracks/11/type = "position_3d"
-tracks/11/imported = true
-tracks/11/enabled = true
-tracks/11/path = NodePath("骨架/Skeleton3D:arm.r")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = PackedFloat32Array(0, 1, -0.336805, 0.323416, 0.00177956)
-tracks/12/type = "rotation_3d"
-tracks/12/imported = true
-tracks/12/enabled = true
-tracks/12/path = NodePath("骨架/Skeleton3D:arm.r")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = PackedFloat32Array(0, 1, 0.0106116, 0.0240009, 0.893581, 0.448135)
-tracks/13/type = "position_3d"
-tracks/13/imported = true
-tracks/13/enabled = true
-tracks/13/path = NodePath("骨架/Skeleton3D:leg.l")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = PackedFloat32Array(0, 1, 0.256957, 0.0483562, -1.8266e-07)
-tracks/14/type = "rotation_3d"
-tracks/14/imported = true
-tracks/14/enabled = true
-tracks/14/path = NodePath("骨架/Skeleton3D:leg.l")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = PackedFloat32Array(0, 1, -1.82202e-07, -2.72952e-07, 0.999165, -0.0408612)
-tracks/15/type = "position_3d"
-tracks/15/imported = true
-tracks/15/enabled = true
-tracks/15/path = NodePath("骨架/Skeleton3D:leg.r")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = PackedFloat32Array(0, 1, -0.256957, 0.0483562, -3.05187e-07)
-tracks/16/type = "rotation_3d"
-tracks/16/imported = true
-tracks/16/enabled = true
-tracks/16/path = NodePath("骨架/Skeleton3D:leg.r")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = PackedFloat32Array(0, 1, -5.60155e-08, -2.82694e-07, 0.999165, 0.0408612)
 
 [sub_resource type="Animation" id="Animation_wnnws"]
 resource_name = "骨架动作"
@@ -333,33 +210,45 @@ tracks/13/keys = PackedFloat32Array(0, 1, 0.36116, 0.36116, 0.36116)
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_84q7h"]
 _data = {
 &"kxAction": SubResource("Animation_7grkx"),
-&"立方体_010Action": SubResource("Animation_7gxol"),
 &"骨架动作": SubResource("Animation_wnnws")
 }
 
 [node name="熊猫家-数钱" instance=ExtResource("1_ga1aq")]
 
-[node name="Skeleton3D" parent="骨架" index="0"]
+[node name="Skeleton3D" parent="骨架" index="1"]
 bones/0/position = Vector3(-0.921949, -1.31222, -2.67148)
-bones/0/rotation = Quaternion(-0.00280807, 0.730816, 0.00262266, 0.682564)
+bones/0/rotation = Quaternion(-0.0028080698, 0.73081595, 0.0026226598, 0.68256396)
 bones/2/position = Vector3(-1.69151e-07, 0.352522, 8.38194e-09)
-bones/2/rotation = Quaternion(-0.1717, -0.106546, 0.00543218, 0.979356)
+bones/2/rotation = Quaternion(-0.17169996, -0.10654598, 0.0054321787, 0.97935575)
+bones/7/position = Vector3(0.57911193, 0.71681607, -0.10908294)
+bones/7/scale = Vector3(0.36116, 0.36116, 0.36116)
 bones/8/position = Vector3(0.373966, 0.198481, -0.154859)
 bones/8/rotation = Quaternion(0.00615717, -0.526966, 0.840978, -0.122572)
+bones/9/position = Vector3(0.373966, 0.198481, -0.154859)
+bones/9/rotation = Quaternion(0.0061571784, -0.5269663, 0.8409785, -0.12257211)
 bones/11/position = Vector3(-0.373966, 0.198481, -0.154859)
 bones/11/rotation = Quaternion(-0.00615725, -0.526967, 0.840978, 0.122572)
+bones/12/position = Vector3(-0.373966, 0.198481, -0.154859)
+bones/12/rotation = Quaternion(-0.006157263, -0.5269669, 0.84097797, 0.12257199)
 bones/13/position = Vector3(0.270056, 0.0456885, -0.191618)
 bones/13/rotation = Quaternion(-0.0279145, -0.682586, 0.72626, -0.0764389)
+bones/14/position = Vector3(0.270056, 0.0456885, -0.191618)
+bones/14/rotation = Quaternion(-0.027914507, -0.68258625, 0.7262602, -0.07643891)
 bones/15/position = Vector3(-0.270056, 0.0456885, -0.191618)
 bones/15/rotation = Quaternion(0.0279143, -0.682587, 0.72626, 0.0764388)
+bones/16/position = Vector3(-0.270056, 0.0456885, -0.191618)
+bones/16/rotation = Quaternion(0.027914293, -0.68258685, 0.72625977, 0.076438785)
 
 [node name="kx" parent="骨架/Skeleton3D" index="0"]
-transform = Transform3D(0.22115, -0.100058, 0.267429, 0.269227, -0.0396051, -0.237455, 0.0951125, 0.344756, 0.050337, -1.19524, -0.00219345, -3.2624)
+transform = Transform3D(0.0422188, -0.32532138, -0.1510633, 0.29110625, -0.05778589, 0.20580208, -0.20955019, -0.14581954, 0.25546414, -1.1952384, -0.0021893978, -3.262402)
 
-[node name="Cylinder_001" parent="骨架/Skeleton3D" index="1"]
-transform = Transform3D(0.770259, -0.0888285, 0.170042, 0.146975, -0.178962, -0.759259, 0.123301, 0.768236, -0.157209, -1.69214, -0.912833, -2.97228)
+[node name="kx_001" parent="骨架/Skeleton3D" index="1"]
+transform = Transform3D(-0.06208092, -0.23574845, 0.26646864, -0.10367443, -0.24676922, -0.24247372, 0.34034464, -0.11817178, -0.02525589, -1.0871253, -0.5141469, -3.0647595)
 
-[node name="AnimationPlayer" parent="." index="12"]
+[node name="Cylinder_001" parent="骨架/Skeleton3D" index="2"]
+transform = Transform3D(-0.07061334, -0.0076806843, 0.79060626, 0.009734131, 0.7936848, 0.008579731, -0.79058343, 0.0104583055, -0.07050978, -1.4965637, -0.76532376, -3.4254932)
+
+[node name="AnimationPlayer" parent="." index="7"]
 libraries = {
 &"": SubResource("AnimationLibrary_84q7h")
 }

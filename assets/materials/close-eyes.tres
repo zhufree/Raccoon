@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b8e1nfw2kt4i6"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_plwjf"]
-load_path = "res://.godot/imported/浣熊-睡觉_02.png-2647f26b030b7461d28c22c5c74e0aa3.s3tc.ctex"
-
-[resource]
-albedo_texture = SubResource("CompressedTexture2D_plwjf")

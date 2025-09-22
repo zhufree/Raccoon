@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjauama6fe42m"
-path.s3tc="res://.godot/imported/波困-看书_未命名.png-a3d334e1c00a48c3405fedd74c56f2f7.s3tc.ctex"
+path="res://.godot/imported/波困-看书_未命名.png-a3d334e1c00a48c3405fedd74c56f2f7.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "ba001437af41e7b4b72bbf726e94942e"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/Bo/波困-看书_未命名.png"
-dest_files=["res://.godot/imported/波困-看书_未命名.png-a3d334e1c00a48c3405fedd74c56f2f7.s3tc.ctex"]
+dest_files=["res://.godot/imported/波困-看书_未命名.png-a3d334e1c00a48c3405fedd74c56f2f7.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6mky1t4vocot"
-path.s3tc="res://.godot/imported/狗-睡觉_嘴巴.png-34e1afe2784cd59ee1ab2f7266df10a3.s3tc.ctex"
+path="res://.godot/imported/狗-睡觉_嘴巴.png-34e1afe2784cd59ee1ab2f7266df10a3.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "cc5e1511ddc1eed8fa11a4dd82b829d0"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/dog/狗-睡觉_嘴巴.png"
-dest_files=["res://.godot/imported/狗-睡觉_嘴巴.png-34e1afe2784cd59ee1ab2f7266df10a3.s3tc.ctex"]
+dest_files=["res://.godot/imported/狗-睡觉_嘴巴.png-34e1afe2784cd59ee1ab2f7266df10a3.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/minute_hand.png-344f9ace9a8d1bf74f749dc1d2961
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

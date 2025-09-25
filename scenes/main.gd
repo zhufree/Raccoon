@@ -25,9 +25,14 @@ var last_mouse_position: Vector2
 
 var scenes_containers = []
 var current_animal: AnimalBase = raccoon
+var touch_points = {}  # 存储触摸点信息
+var initial_distance = 0.0  # 初始双指距离
+var is_pinching = false  # 是否正在进行双指缩放
+var base_fov = 70.0  # 基础 fov 值
+var fov_sensitivity = 0.2  # 缩放灵敏度
 
 func _ready():
-	
+	base_fov = camera_3d.fov  # 初始化基础 fov
 	scenes_containers = [bo, panda, dog, raccoon, lily]
 	current_animal = raccoon
 	update_button_sizes(raccoon_button)
@@ -56,6 +61,7 @@ func update_camera_position():
 	
 	# 让摄像头始终看向中心点(0,0,0)
 	camera_3d.look_at(Vector3.ZERO, Vector3.UP)
+
 
 # 按钮大小常量
 const BUTTON_SIZE_NORMAL = Vector2(110, 110)
@@ -113,39 +119,72 @@ func _on_close_button_pressed() -> void:
 	pass # Replace with function body.
 
 func _input(event):
-	# 处理鼠标拖动窗口和摄像头旋转
-	if event is InputEventMouseButton:
-		# if event.button_index == MOUSE_BUTTON_LEFT:
-		# 	if event.pressed:
-		# 		is_dragging = true
-		# 		# 记录鼠标相对于窗口的偏移
-		# 		var window_pos = DisplayServer.window_get_position()
-		# 		var mouse_pos = Vector2i(DisplayServer.mouse_get_position())
-		# 		drag_offset = window_pos - mouse_pos
-		# 	else:
-		# 		is_dragging = false
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			if event.pressed:
+	# 处理触摸事件
+	if event is InputEventScreenTouch:
+		if event.pressed:
+			# 记录触摸点
+			touch_points[event.index] = event.position
+			if touch_points.size() == 2:
+				# 开始双指缩放，计算初始距离
+				is_pinching = true
+				var positions = touch_points.values()
+				initial_distance = positions[0].distance_to(positions[1])
+			elif touch_points.size() == 1:
 				is_camera_rotating = true
 				last_mouse_position = event.position
 			else:
 				is_camera_rotating = false
+		else:
+			# 释放触摸点
+			touch_points.erase(event.index)
+			if touch_points.size() < 2:
+				is_pinching = false
+
+	# 处理拖动事件（双指移动）
+	if event is InputEventScreenDrag and is_pinching and touch_points.size() == 2:
+		touch_points[event.index] = event.position
+		var positions = touch_points.values()
+		var current_distance = positions[0].distance_to(positions[1])
+		
+		# 计算缩放比例（而不是绝对差值）
+		if initial_distance > 0:
+			var scale_factor = current_distance / initial_distance
+			var fov_change = (1.0 - scale_factor) * camera_3d.fov * fov_sensitivity
+			
+			# 更新相机 fov（基于当前 fov 而不是 base_fov）
+			camera_3d.fov = clamp(camera_3d.fov + fov_change, 30.0, 120.0)
+			
+			# 更新初始距离以实现平滑缩放
+			initial_distance = current_distance
+		return
+
+	# 鼠标滚轮缩放（桌面端）
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			camera_3d.fov = clamp(camera_3d.fov - 2.0, 30.0, 120.0)
+		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			camera_3d.fov = clamp(camera_3d.fov + 2.0, 30.0, 120.0)
 	
-	elif event is InputEventMouseMotion:
-		if is_camera_rotating:
-			# 计算鼠标移动增量
-			var mouse_delta = event.position - last_mouse_position
-			last_mouse_position = event.position
+	# 处理鼠标拖动窗口和摄像头旋转
+	# elif event is InputEventMouseButton:
+	# 	if event.button_index == MOUSE_BUTTON_LEFT:
+	# 		if event.pressed:
+	# 			is_camera_rotating = true
+	# 			last_mouse_position = event.position
+	# 		else:
+	# 			is_camera_rotating = false
+	
+	elif event is InputEventScreenDrag and is_camera_rotating:
+		var mouse_delta = event.position - last_mouse_position
+		last_mouse_position = event.position
+		
+		camera_yaw -= mouse_delta.x * camera_sensitivity
+		camera_pitch += mouse_delta.y * camera_sensitivity
 			
-			# 更新摄像头角度
-			camera_yaw -= mouse_delta.x * camera_sensitivity
-			camera_pitch += mouse_delta.y * camera_sensitivity
-			
-			# 限制垂直角度范围，避免翻转
-			camera_pitch = clamp(camera_pitch, -PI/2 + 0.5, PI/2 - 0.5)
-			
-			# 更新摄像头位置
-			update_camera_position()
+		camera_pitch = clamp(camera_pitch, -PI/2 + 0.5, PI/2 - 0.5)
+		
+		update_camera_position()
+	
 
 
 func _on_sleep_button_pressed() -> void:

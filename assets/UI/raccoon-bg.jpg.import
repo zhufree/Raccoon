@@ -2,21 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bglvjtg0ucu1g"
-path.s3tc="res://.godot/imported/浣熊-跑_浣熊.webp-b12fdea9db936746cfb629b055db92f4.s3tc.ctex"
-path.etc2="res://.godot/imported/浣熊-跑_浣熊.webp-b12fdea9db936746cfb629b055db92f4.etc2.ctex"
+uid="uid://bb2ng3afiyfja"
+path.s3tc="res://.godot/imported/raccoon-bg.jpg-e44674b84abc8090f742a72265f92f37.s3tc.ctex"
+path.etc2="res://.godot/imported/raccoon-bg.jpg-e44674b84abc8090f742a72265f92f37.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "c45b7d71c98f731b466bbf93c1d2b0dd"
-}
 
 [deps]
 
-source_file="res://assets/models/raccoon/浣熊-跑_浣熊.webp"
-dest_files=["res://.godot/imported/浣熊-跑_浣熊.webp-b12fdea9db936746cfb629b055db92f4.s3tc.ctex", "res://.godot/imported/浣熊-跑_浣熊.webp-b12fdea9db936746cfb629b055db92f4.etc2.ctex"]
+source_file="res://assets/UI/raccoon-bg.jpg"
+dest_files=["res://.godot/imported/raccoon-bg.jpg-e44674b84abc8090f742a72265f92f37.s3tc.ctex", "res://.godot/imported/raccoon-bg.jpg-e44674b84abc8090f742a72265f92f37.etc2.ctex"]
 
 [params]
 

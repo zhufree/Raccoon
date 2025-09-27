@@ -19,7 +19,7 @@ extends Node3D
 var is_camera_rotating: bool = false
 var camera_distance: float = 10.0  # 摄像头距离中心的半径
 var camera_yaw: float = 0.0        # 水平角度（弧度），0为正前方
-var camera_pitch: float = 0.3      # 垂直角度（弧度），正值向上俯视
+var camera_pitch: float = 0.0      # 垂直角度（弧度），正值向上俯视
 var camera_sensitivity: float = 0.005  # 鼠标敏感度
 var last_mouse_position: Vector2
 
@@ -31,11 +31,22 @@ var is_pinching = false  # 是否正在进行双指缩放
 var base_fov = 70.0  # 基础 fov 值
 var fov_sensitivity = 0.2  # 缩放灵敏度
 
+var animal_bg = {
+	"raccoon": preload("res://assets/UI/raccoon-bg.jpg"),
+	"lily": preload("res://assets/UI/lily-bg.jpg"),
+	# "panda": preload("res://assets/UI/panda-bg.jpg"),
+	"dog": preload("res://assets/UI/dog-bg.jpg"),
+	"bo": preload("res://assets/UI/bo-bg.jpg")
+}
+
 func _ready():
 	base_fov = camera_3d.fov  # 初始化基础 fov
 	scenes_containers = [bo, panda, dog, raccoon, lily]
 	current_animal = raccoon
 	update_button_sizes(raccoon_button)
+	
+	# 根据摄像头初始位置计算球面坐标参数
+	calculate_initial_camera_angles()
 	
 	# 初始化摄像头位置
 	update_camera_position()
@@ -48,6 +59,25 @@ func _ready():
 	panda_button.connect("pressed", Callable(self, "on_panda_button_pressed"))
 	dog_button.connect("pressed", Callable(self, "on_dog_button_pressed"))
 	bo_button.connect("pressed", Callable(self, "on_bo_button_pressed"))
+
+# 根据摄像头初始位置计算球面坐标参数
+func calculate_initial_camera_angles():
+	# 获取摄像头初始位置
+	var initial_pos = camera_3d.global_position
+	
+	# 计算摄像头距离
+	camera_distance = initial_pos.length()
+	
+	# 计算水平角度 (yaw)
+	camera_yaw = atan2(initial_pos.x, initial_pos.z)
+	
+	# 计算垂直角度 (pitch)
+	# 先计算水平面上的距离
+	var horizontal_distance = sqrt(initial_pos.x * initial_pos.x + initial_pos.z * initial_pos.z)
+	camera_pitch = atan2(initial_pos.y, horizontal_distance)
+	
+	print("初始摄像头位置: ", initial_pos)
+	print("计算得到的参数: 距离=", camera_distance, " yaw=", camera_yaw, " pitch=", camera_pitch)
 
 # 更新摄像头位置（球面坐标系环绕移动）
 func update_camera_position():
@@ -76,17 +106,22 @@ func update_button_sizes(selected_button: TextureButton):
 		else:
 			button.custom_minimum_size = BUTTON_SIZE_NORMAL
 
+
+# 切换小动物时，替换当前sky的全景图
 func on_raccoon_button_pressed():
 	hide_all_scenes()
 	raccoon.visible = true
 	current_animal = raccoon
 	update_button_sizes(raccoon_button)
+	world_environment.environment.sky.sky_material.panorama = animal_bg["raccoon"]
+
 
 func on_lily_button_pressed():
 	hide_all_scenes()
 	lily.visible = true
 	current_animal = lily
 	update_button_sizes(lily_button)
+	world_environment.environment.sky.sky_material.panorama = animal_bg["lily"]
 
 func on_panda_button_pressed():
 	hide_all_scenes()
@@ -99,12 +134,14 @@ func on_dog_button_pressed():
 	dog.visible = true
 	current_animal = dog
 	update_button_sizes(dog_button)
+	world_environment.environment.sky.sky_material.panorama = animal_bg["dog"]
 
 func on_bo_button_pressed():
 	hide_all_scenes()
 	bo.visible = true
 	current_animal = bo
 	update_button_sizes(bo_button)
+	world_environment.environment.sky.sky_material.panorama = animal_bg["bo"]
 
 func hide_all_scenes():
 	for scene in scenes_containers:
@@ -165,14 +202,6 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			camera_3d.fov = clamp(camera_3d.fov + 2.0, 30.0, 120.0)
 	
-	# 处理鼠标拖动窗口和摄像头旋转
-	# elif event is InputEventMouseButton:
-	# 	if event.button_index == MOUSE_BUTTON_LEFT:
-	# 		if event.pressed:
-	# 			is_camera_rotating = true
-	# 			last_mouse_position = event.position
-	# 		else:
-	# 			is_camera_rotating = false
 	
 	elif event is InputEventScreenDrag and is_camera_rotating:
 		var mouse_delta = event.position - last_mouse_position

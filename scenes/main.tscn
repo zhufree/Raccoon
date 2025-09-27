@@ -49,26 +49,14 @@ sky = SubResource("Sky_fuf3a")
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_trceg")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0.467466, -0.523783, 0.712128, -0.177415, 0.733588, 0.656028, 0, 2.45381, 8.19535)
-shadow_enabled = true
-
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 6.07343, -12.0786)
-shadow_enabled = true
-
-[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.0491102, 0.177335, 0.982924, 0.858297, 0.495796, -0.132333, -0.510797, 0.85014, -0.127858, 13.7544, 2.48787, 2.52493)
-shadow_enabled = true
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jbj1t")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.878066, 0.478539, 0, -0.478539, 0.878066, 0, 2.66686, 8.06375)
+transform = Transform3D(0.0707372, -0.31850895, 0.94527686, 0, 0.94765073, 0.31930882, -0.997495, -0.02258701, 0.067034155, 9.452768, 3.1930878, 0.6703416)
 
 [node name="Bo" type="Node3D" parent="."]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+transform = Transform3D(-0.005333632, 0, 0.79998213, 0, 0.8, 0, -0.79998213, 0, -0.005333632, -1.6182044, 0, 0)
 visible = false
 script = ExtResource("2_muem4")
 
@@ -81,7 +69,7 @@ visible = false
 visible = false
 
 [node name="Panda" type="Node3D" parent="."]
-transform = Transform3D(-0.8, 0, -1.2079664e-07, 0, 0.8, 0, 1.2079664e-07, 0, -0.8, 0, 0, 1.64569)
+transform = Transform3D(0.005333811, 0, -0.7999822, 0, 0.79999995, 0, 0.7999822, 0, 0.005333811, 0.027449124, 0, 0)
 visible = false
 script = ExtResource("6_yc10j")
 
@@ -94,7 +82,7 @@ visible = false
 visible = false
 
 [node name="Dog" type="Node3D" parent="."]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+transform = Transform3D(-0.005333632, 0, 0.79998213, 0, 0.8, 0, -0.79998213, 0, -0.005333632, -1.6182044, 0, 0)
 visible = false
 script = ExtResource("10_og1vs")
 
@@ -106,8 +94,18 @@ visible = false
 [node name="DogSleep" parent="Dog" instance=ExtResource("13_2f3dj")]
 visible = false
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Dog"]
+transform = Transform3D(-1.2371787, -0.6185902, 0.35714358, 0.66780865, -0.7482612, 1.0173265, -0.25345004, 1.0479827, 0.9371829, 0, 1.8165572, 11.707643)
+shadow_enabled = true
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Dog"]
+transform = Transform3D(-1.237179, -0.6185899, 0.35714298, 0, 0.7142857, 1.2371793, -0.7142861, 1.0714285, -0.6185894, 0, 5.4107633, -17.255144)
+visible = false
+light_energy = 0.3
+shadow_enabled = true
+
 [node name="Lily" type="Node3D" parent="."]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+transform = Transform3D(-0.005333632, 0, 0.79998213, 0, 0.8, 0, -0.79998213, 0, -0.005333632, -1.6182044, 0, 0)
 visible = false
 script = ExtResource("14_yq6so")
 
@@ -120,7 +118,7 @@ visible = false
 visible = false
 
 [node name="Raccoon" type="Node3D" parent="."]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 1.18222, 0)
+transform = Transform3D(-0.0046668947, 0, 0.69998443, 0, 0.6999999, 0, -0.69998443, 0, -0.0046668947, -1.6182044, 1.18222, 0)
 script = ExtResource("18_5q0nq")
 
 [node name="RaccoonRun" parent="Raccoon" instance=ExtResource("19_dgi5k")]
@@ -130,6 +128,15 @@ visible = false
 
 [node name="RaccoonSleep" parent="Raccoon" instance=ExtResource("21_kmb1v")]
 visible = false
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Raccoon"]
+transform = Transform3D(-1.2371787, -0.6185902, 0.35714358, 0.66780865, -0.7482612, 1.0173265, -0.25345004, 1.0479827, 0.9371829, 0, 1.8165572, 11.707643)
+shadow_enabled = true
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Raccoon"]
+transform = Transform3D(-1.237179, -0.6185899, 0.35714298, 0, 0.7142857, 1.2371793, -0.7142861, 1.0714285, -0.6185894, 0, 5.4107633, -17.255144)
+light_energy = 0.3
+shadow_enabled = true
 
 [node name="UI" type="CanvasLayer" parent="."]
 
